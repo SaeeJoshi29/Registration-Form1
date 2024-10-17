@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-color: black;
+            padding: 20px;
+            text-align: center;
+            color: blanchedalmond;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="date"], input[type="email"], input[type="tel"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            width: 100px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .reset-btn {
+            background-color: red;
+        }
+
+        .reset-btn:hover, .btn:hover {
+            opacity: 0.9;
+        }
+
+        hr {
+            margin: 20px 0;
+        }
+
+        /* Style for the note at the top */
+        .note {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .note b {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Register Here</h1>
+        </div>
+        <form action="Regdone.html" method="post">
+            <h2>To apply for the program</h2>
+            <p class="note">Kindly note that one person can fill the form <b>only once</b>. Ensure that you have entered the correct data.</p>
+
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter first name" required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter last name" required>
+
+            <label for="bdate">Birthdate:</label>
+            <input type="date" id="bdate" name="bdate" required>
+
+            <label>Localite:</label>
+            <div class="radio-group">
+                <label for="yes">Yes</label>
+                <input type="radio" id="yes" name="localite" value="Yes" required>
+                <label for="no">No</label>
+                <input type="radio" id="no" name="localite" value="No" required>
+            </div>
+
+            <label for="add">Address:</label>
+            <input type="text" id="add" name="add1" placeholder="Line 1" maxlength="40" required>
+            <input type="text" id="add2" name="add2" placeholder="Line 2" maxlength="40">
+
+            <label for="pin">Pincode:</label>
+            <input type="number" id="pin" name="pin" placeholder="Enter pincode" maxlength="6" required>
+
+            <label for="branch">Branch:</label>
+            <select id="branch" name="branch" required>
+                <option value="CSE">CSE</option>
+                <option value="CSE(AIML)">CSE (AIML)</option>
+                <option value="CSE(AIDS)">CSE (AIDS)</option>
+                <option value="CSE(DS)">CSE (DS)</option>
+                <option value="ECS">Electronics and Computer Science</option>
+                <option value="ENTC">Electronics and Telecommunication</option>
+                <option value="Mech">Mechanical</option>
+            </select>
+
+            <label for="year">Year:</label>
+            <select id="year" name="year" required>
+                <option value="first year">First Year</option>
+                <option value="second year">Second Year</option>
+                <option value="third year">Third Year</option>
+                <option value="fourth year">Fourth Year</option>
+            </select>
+
+            <label for="email">College Email ID:</label>
+            <input type="email" id="email" name="email" placeholder="abc@rknec.edu" required>
+
+            <label for="phone">Whatsapp Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="91+ xxxxxxxxxx" required minlength="10" maxlength="10">
+
+            <hr>
+
+            <button type="submit" class="btn">Register</button>
+            <button type="reset" class="btn reset-btn">Reset</button>
+        </form>
+    </div>
+</body>
+</html>
+            
